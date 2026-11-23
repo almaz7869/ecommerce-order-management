@@ -1,20 +1,12 @@
-# Goodswell — E-Commerce Order Management
+﻿# Goodswell — E-Commerce Order Management
 
-A responsive, browser-only operations dashboard based on the e-commerce project description in the resume.
+A React order and inventory workspace backed by a Spring Boot API with transactional stock updates and AI reorder recommendations.
 
-## Demo features
+## Stack
+React 19 + Vite; Java 17 + Spring Boot; Spring Security/JWT; Spring Data JPA; MySQL; Redis; Spring AI; Docker Compose.
 
-- Search and filter sample orders.
-- Create orders, inspect order details and advance fulfillment status.
-- Review seeded inventory levels and export orders to CSV.
-- Persist demo orders in browser local storage.
+## Local setup
+Copy `.env.example` to `.env`, set database, Redis, and login values, and add `AI_API_KEY` for live AI recommendations. Run `docker compose up --build`, then open `http://localhost:5173`. API health: `http://localhost:8080/api/health`.
 
-## Run locally
-
-Open `index.html` in a modern browser. No build step is required.
-
-## Deployment
-
-This static prototype can be hosted with GitHub Pages from the repository's root folder. It does not include the Spring Boot API, MySQL, Redis cache, authentication, payment processing, inventory database, or Docker services described in the resume.
-
-All orders and customers shown are fictional sample data.
+## Hosted demo
+The GitHub Pages site is a frontend demo with sample orders and browser-local state. It is not connected to the Spring API yet. Full AI and persistent operations require a deployed API, MySQL/Redis services, and a private AI provider key.
